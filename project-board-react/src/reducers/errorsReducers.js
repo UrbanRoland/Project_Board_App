@@ -1,5 +1,5 @@
 import { GET_ERRORS } from "../actions/types";
-const initialState = { error: "asdddw" };
+const initialState = {};
 export default function (state = initialState, actions) {
   switch (actions.type) {
     case GET_ERRORS:
