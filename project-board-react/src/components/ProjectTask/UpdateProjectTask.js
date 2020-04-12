@@ -1,14 +1,17 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { addProjectTask } from "../../actions/projectTaskActions";
 import classnames from "classnames";
+import PropTypes from "prop-types";
+import {
+  getProjectTask,
+  addProjectTask
+} from "../../actions/projectTaskActions";
 
-class AddProjectTask extends Component {
+class UpdateProjectTask extends Component {
   constructor() {
     super();
     this.state = {
+      id: "",
       summary: "",
       acceptanceCriteria: "",
       status: "",
@@ -17,27 +20,42 @@ class AddProjectTask extends Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
     }
+
+    const { id, summary, acceptanceCriteria, status } = nextProps.project_task;
+
+    this.setState({
+      id,
+      summary,
+      acceptanceCriteria,
+      status
+    });
+  }
+
+  componentDidMount() {
+    const { pt_id } = this.props.match.params;
+    this.props.getProjectTask(pt_id);
+  }
+
+  onSubmit(e) {
+    e.preventDefault();
+    const updatedTask = {
+      id: this.state.id,
+      summary: this.state.summary,
+      acceptanceCriteria: this.state.acceptanceCriteria,
+      status: this.state.status
+    };
+
+    this.props.addProjectTask(updatedTask, this.props.history);
   }
 
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
   }
-
-  onSubmit(e) {
-    e.preventDefault();
-    const newProjectTask = {
-      summary: this.state.summary,
-      acceptanceCriteria: this.state.acceptanceCriteria,
-      status: this.state.status
-    };
-    // console.log(newProjectTask);
-    this.props.addProjectTask(newProjectTask, this.props.history);
-  }
-
   render() {
     const { errors } = this.state;
     return (
@@ -45,9 +63,9 @@ class AddProjectTask extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
-              <Link to="/" className="btn btn-light">
+              <a href="/" className="btn btn-light">
                 Back to Board
-              </Link>
+              </a>
               <h4 className="display-4 text-center">
                 Add /Update Project Task
               </h4>
@@ -59,8 +77,8 @@ class AddProjectTask extends Component {
                       "is-invalid": errors.summary
                     })}
                     name="summary"
-                    value={this.state.summary}
                     placeholder="Project Task summary"
+                    value={this.state.summary}
                     onChange={this.onChange}
                   />
                   {errors.summary && (
@@ -102,16 +120,19 @@ class AddProjectTask extends Component {
   }
 }
 
-AddProjectTask.propTypes = {
-  addProjectTask: PropTypes.func.isRequired,
-  errors: PropTypes.object.isRequired
+UpdateProjectTask.propTypes = {
+  project_task: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired,
+  getProjectTask: PropTypes.func.isRequired,
+  addProjectTask: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
+  project_task: state.project_task.project_task,
   errors: state.errors
 });
 
 export default connect(
   mapStateToProps,
-  { addProjectTask }
-)(AddProjectTask);
+  { getProjectTask, addProjectTask }
+)(UpdateProjectTask);
