@@ -17,7 +17,7 @@ class ProjectBoard extends Component {
     let inProgressItems = [];
     let doneItems = [];
 
-    const BoardAlgorithm = project_tasks => {
+    const BoardAlgorithm = (project_tasks) => {
       if (project_tasks.length < 1) {
         return (
           <div className="alert alert-info text-center" role="alert">
@@ -25,7 +25,7 @@ class ProjectBoard extends Component {
           </div>
         );
       } else {
-        const tasks = project_tasks.map(project_task => (
+        const tasks = project_tasks.map((project_task) => (
           <ProjectTaskItem key={project_task.id} project_task={project_task} />
         ));
 
@@ -98,14 +98,11 @@ class ProjectBoard extends Component {
 
 ProjectBoard.propTypes = {
   getBacklog: PropTypes.func.isRequired,
-  project_tasks: PropTypes.object.isRequired
+  project_tasks: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = state => ({
-  project_tasks: state.project_task
+const mapStateToProps = (state) => ({
+  project_tasks: state.project_task,
 });
 
-export default connect(
-  mapStateToProps,
-  { getBacklog }
-)(ProjectBoard);
+export default connect(mapStateToProps, { getBacklog })(ProjectBoard);
