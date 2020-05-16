@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/UrbanRoland/Project_Board_App/precache-manifest.a71ddd1a8e0bca7bc1aec964cd2ecd24.js"
+  "/UrbanRoland/Project_Board_App/tree/master/project-board-react/precache-manifest.3ef17b25ec06ff63d8f90a2e49cd238c.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -33,7 +33,7 @@ workbox.core.clientsClaim();
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/UrbanRoland/Project_Board_App/index.html"), {
+workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/UrbanRoland/Project_Board_App/tree/master/project-board-react/index.html"), {
   
   blacklist: [/^\/_/,/\/[^/?]+\.[^/]+$/],
 });

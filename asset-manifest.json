@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/UrbanRoland/Project_Board_App/static/css/main.5fd6d562.chunk.css",
-    "main.js": "/UrbanRoland/Project_Board_App/static/js/main.53924b0c.chunk.js",
-    "main.js.map": "/UrbanRoland/Project_Board_App/static/js/main.53924b0c.chunk.js.map",
-    "runtime-main.js": "/UrbanRoland/Project_Board_App/static/js/runtime-main.9a9c6740.js",
-    "runtime-main.js.map": "/UrbanRoland/Project_Board_App/static/js/runtime-main.9a9c6740.js.map",
-    "static/css/2.8f4dfbca.chunk.css": "/UrbanRoland/Project_Board_App/static/css/2.8f4dfbca.chunk.css",
-    "static/js/2.d895f448.chunk.js": "/UrbanRoland/Project_Board_App/static/js/2.d895f448.chunk.js",
-    "static/js/2.d895f448.chunk.js.map": "/UrbanRoland/Project_Board_App/static/js/2.d895f448.chunk.js.map",
-    "index.html": "/UrbanRoland/Project_Board_App/index.html",
-    "precache-manifest.a71ddd1a8e0bca7bc1aec964cd2ecd24.js": "/UrbanRoland/Project_Board_App/precache-manifest.a71ddd1a8e0bca7bc1aec964cd2ecd24.js",
-    "service-worker.js": "/UrbanRoland/Project_Board_App/service-worker.js",
-    "static/css/2.8f4dfbca.chunk.css.map": "/UrbanRoland/Project_Board_App/static/css/2.8f4dfbca.chunk.css.map",
-    "static/css/main.5fd6d562.chunk.css.map": "/UrbanRoland/Project_Board_App/static/css/main.5fd6d562.chunk.css.map",
-    "static/js/2.d895f448.chunk.js.LICENSE.txt": "/UrbanRoland/Project_Board_App/static/js/2.d895f448.chunk.js.LICENSE.txt"
+    "main.css": "/UrbanRoland/Project_Board_App/tree/master/project-board-react/static/css/main.5fd6d562.chunk.css",
+    "main.js": "/UrbanRoland/Project_Board_App/tree/master/project-board-react/static/js/main.7deeedc2.chunk.js",
+    "main.js.map": "/UrbanRoland/Project_Board_App/tree/master/project-board-react/static/js/main.7deeedc2.chunk.js.map",
+    "runtime-main.js": "/UrbanRoland/Project_Board_App/tree/master/project-board-react/static/js/runtime-main.b216cbdb.js",
+    "runtime-main.js.map": "/UrbanRoland/Project_Board_App/tree/master/project-board-react/static/js/runtime-main.b216cbdb.js.map",
+    "static/css/2.8f4dfbca.chunk.css": "/UrbanRoland/Project_Board_App/tree/master/project-board-react/static/css/2.8f4dfbca.chunk.css",
+    "static/js/2.d895f448.chunk.js": "/UrbanRoland/Project_Board_App/tree/master/project-board-react/static/js/2.d895f448.chunk.js",
+    "static/js/2.d895f448.chunk.js.map": "/UrbanRoland/Project_Board_App/tree/master/project-board-react/static/js/2.d895f448.chunk.js.map",
+    "index.html": "/UrbanRoland/Project_Board_App/tree/master/project-board-react/index.html",
+    "precache-manifest.3ef17b25ec06ff63d8f90a2e49cd238c.js": "/UrbanRoland/Project_Board_App/tree/master/project-board-react/precache-manifest.3ef17b25ec06ff63d8f90a2e49cd238c.js",
+    "service-worker.js": "/UrbanRoland/Project_Board_App/tree/master/project-board-react/service-worker.js",
+    "static/css/2.8f4dfbca.chunk.css.map": "/UrbanRoland/Project_Board_App/tree/master/project-board-react/static/css/2.8f4dfbca.chunk.css.map",
+    "static/css/main.5fd6d562.chunk.css.map": "/UrbanRoland/Project_Board_App/tree/master/project-board-react/static/css/main.5fd6d562.chunk.css.map",
+    "static/js/2.d895f448.chunk.js.LICENSE.txt": "/UrbanRoland/Project_Board_App/tree/master/project-board-react/static/js/2.d895f448.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9a9c6740.js",
+    "static/js/runtime-main.b216cbdb.js",
     "static/css/2.8f4dfbca.chunk.css",
     "static/js/2.d895f448.chunk.js",
     "static/css/main.5fd6d562.chunk.css",
-    "static/js/main.53924b0c.chunk.js"
+    "static/js/main.7deeedc2.chunk.js"
   ]
 }
